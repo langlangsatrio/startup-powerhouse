@@ -14,8 +14,8 @@ export default function Jumbotron() {
           </h4>
         </Badge>
         <h1 className="lg:font-semibold lg:text-6xl">
-          Build startup's MVP and products at affordable price. Bringing ideas
-          to reality in weeks, not months.
+          Building startup&apos;s MVP and products at affordable price. Bringing
+          ideas to reality in weeks, not months.
         </h1>
         <p className="lg:font-medium lg:text-xl">
           lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem
