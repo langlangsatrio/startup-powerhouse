@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import { IoMdClose } from "react-icons/io";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState<Boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
