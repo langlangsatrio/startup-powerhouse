@@ -7,7 +7,7 @@ export default function FeaturedIn() {
   return (
     <div className="py-8">
       <div>
-        <h1 className="font-medium text-center mb-3 lg:mb-8 text-gray-300">
+        <h1 className="mb-3 text-center font-medium text-gray-300 lg:mb-8">
           We are featured in:
         </h1>
       </div>
@@ -22,19 +22,19 @@ export default function FeaturedIn() {
         >
           <FaProductHunt
             color="#dadada"
-            className="w-12 md:w-16 lg:w-16 h-fit mx-10 lg:mx-20"
+            className="mx-10 h-fit w-12 md:w-16 lg:mx-20 lg:w-16"
           />
           <DiTechcrunch
             color="#dadada"
-            className="w-12 md:w-16 lg:w-16 h-fit mx-10 lg:mx-20"
+            className="mx-10 h-fit w-12 md:w-16 lg:mx-20 lg:w-16"
           />
           <FaGoogle
             color="#dadada"
-            className="w-12 md:w-16 lg:w-16 h-fit mx-10 lg:mx-20"
+            className="mx-10 h-fit w-12 md:w-16 lg:mx-20 lg:w-16"
           />
           <FaHackerNews
             color="#dadada"
-            className="w-12 md:w-16 lg:w-16 h-fit mx-10 lg:mx-20"
+            className="mx-10 h-fit w-12 md:w-16 lg:mx-20 lg:w-16"
           />
         </Marquee>
       </div>

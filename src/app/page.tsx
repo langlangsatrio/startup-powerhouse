@@ -1,13 +1,9 @@
-import FeaturedIn from "@/page/section/FeaturedIn/FeaturedIn";
-import Jumbotron from "@/page/section/Jumbotron/Jumbotron";
-import ProblemSection from "@/page/section/Problem/Problem";
+import Home from "@/page/home/Home";
 
-export default function Home() {
+export default function App() {
   return (
-    <div className="flex flex-col">
-      <Jumbotron />
-      <FeaturedIn />
-      <ProblemSection />
-    </div>
+    <>
+      <Home />
+    </>
   );
 }

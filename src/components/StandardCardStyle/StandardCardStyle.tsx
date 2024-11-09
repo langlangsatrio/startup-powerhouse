@@ -14,10 +14,14 @@ const StandardCardStyle: React.FC<IStandardCardStyle> = ({
   component,
 }: IStandardCardStyle) => {
   return (
-    <div className="flex flex-col gap-3 justify-center items-center lg:gap-4 px-8 md:px-18 lg:px-20 py-4 md:py-5">
-      {img ? <img /> : <div className="items-center">{component}</div>}
-      <h1 className="font-bold text-lg md:text-2xl text-center">{title}</h1>
-      <p className="text-md md:text-lg text-center">{content}</p>
+    <div className="md:px-18 flex flex-col items-center justify-center gap-3 px-8 py-4 md:py-5 lg:gap-4 lg:px-20">
+      {img ? (
+        <img alt="Description" />
+      ) : (
+        <div className="items-center">{component}</div>
+      )}
+      <h1 className="text-center text-lg font-bold md:text-2xl">{title}</h1>
+      <p className="text-md text-center md:text-lg">{content}</p>
     </div>
   );
 };
