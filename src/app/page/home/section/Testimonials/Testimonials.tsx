@@ -22,7 +22,7 @@ export default function Testimonials() {
       <div className="testimonials badge user mb-6 md:mb-8">
         <TestimonialsRatingBadge />
       </div>
-      <div className="flex flex-col gap-7 lg:grid lg:grid-cols-3 lg:gap-7">
+      <div className="flex flex-col gap-7 lg:grid lg:grid-cols-3 lg:gap-7 lg:px-20">
         <TestimonialsCard
           testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
           avatarAlias="JM"

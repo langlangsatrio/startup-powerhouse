@@ -3,6 +3,7 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Button } from "../ui/button";
 import { IoMdClose } from "react-icons/io";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -19,23 +20,27 @@ export default function Navbar() {
            * Div phone menu mewakili menu handphone
            */}
           <div className="content flex items-center justify-between">
-            <div className="logo flex flex-col">
-              <h1 className="logo-text text-xl font-bold">Startup</h1>
-              <h1 className="logo-text text-xl font-bold">Powerhouse</h1>
+            <div className="logo flex cursor-pointer flex-col">
+              <h1 className="logo-text text-xl font-bold">
+                <Link href="/">Startup</Link>
+              </h1>
+              <h1 className="logo-text text-xl font-bold">
+                <Link href="/">Powerhouse</Link>
+              </h1>
             </div>
             <div className="menu hidden md:gap-3 lg:flex">
               <ul className="flex gap-10">
                 <li>
-                  <a href="#">Service</a>
+                  <Link href="/#service">Service</Link>
                 </li>
                 <li>
-                  <a href="#">Pricing</a>
+                  <Link href="/#pricing">Pricing</Link>
                 </li>
                 <li>
-                  <a href="#">About</a>
+                  <Link href="/page/about-us/">About</Link>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <Link href="/#contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -56,19 +61,24 @@ export default function Navbar() {
             {isOpen && (
               <div className="menuphone my-3 flex flex-col py-2 lg:hidden">
                 <li className="my-2 list-none">
-                  <a href="#" className="font-semibold">
+                  <Link href="/#service" className="font-semibold">
                     Service
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2 list-none">
-                  <a href="#" className="font-semibold">
-                    Service
-                  </a>
+                  <Link href="/#pricing" className="font-semibold">
+                    Pricing
+                  </Link>
                 </li>
                 <li className="my-2 list-none">
-                  <a href="#" className="font-semibold">
-                    Service
-                  </a>
+                  <Link href="/page/about-us/" className="font-semibold">
+                    About
+                  </Link>
+                </li>
+                <li className="my-2 list-none">
+                  <Link href="/#contact" className="font-semibold">
+                    Contact
+                  </Link>
                 </li>
               </div>
             )}

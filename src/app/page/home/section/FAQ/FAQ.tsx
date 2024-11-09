@@ -11,7 +11,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Badge } from "@/components/ui/badge";
 export default function Faq() {
   return (
-    <div className="page-layout flex h-full flex-col items-center justify-center gap-10 px-10 py-14 md:pb-24 md:pt-10 lg:mt-0 lg:flex-col lg:items-start lg:justify-start lg:gap-28 lg:px-52 lg:py-28">
+    <div className="page-layout flex h-full flex-col items-center justify-center gap-10 px-10 py-14 md:pb-24 md:pt-10 lg:mt-0 lg:flex-col lg:items-start lg:justify-start lg:gap-20 lg:px-52 lg:pb-20 lg:pt-10">
       <div className="flex w-full flex-col items-center">
         <Badge
           variant={"outline"}
@@ -58,11 +58,11 @@ export default function Faq() {
           </h1>
           <div className="w-full">
             <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1" className="py-1 md:py-2 lg:py-3">
+              <AccordionItem value="item-1" className="py-2 md:py-2 lg:py-5">
                 <AccordionTrigger className="flex w-full items-center justify-between text-base font-medium md:text-2xl">
                   <p>Why startup powerhouse?</p> <IoIosArrowDown />
                 </AccordionTrigger>
-                <AccordionContent className="py-5 md:text-lg">
+                <AccordionContent className="py-5 text-xs md:text-lg">
                   Startup powerhouse is your one-off complete package partner to
                   launch and grow startup. We are a bunch of software developer,
                   sales, marketer, and designer who work together to create your
@@ -73,12 +73,12 @@ export default function Faq() {
                   </span>
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-2" className="py-1 md:py-2 lg:py-3">
+              <AccordionItem value="item-2" className="py-2 md:py-2 lg:py-5">
                 <AccordionTrigger className="flex w-full items-center justify-between text-base font-medium md:text-2xl">
                   <p>What if I&apos;m not happy with the results?</p>{" "}
                   <IoIosArrowDown />
                 </AccordionTrigger>
-                <AccordionContent className="py-5 md:text-lg">
+                <AccordionContent className="py-5 text-xs md:text-lg">
                   This is not happen very often. But anyway, if you are not
                   happy, we offer unlimited revisions, until you are 100%
                   satisfied.{" "}
@@ -89,11 +89,11 @@ export default function Faq() {
                   </span>
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-3" className="py-1 md:py-2 lg:py-3">
+              <AccordionItem value="item-3" className="py-2 md:py-2 lg:py-5">
                 <AccordionTrigger className="flex w-full items-center justify-between text-base font-medium md:text-2xl">
                   <p>What do you mean by partnership?</p> <IoIosArrowDown />
                 </AccordionTrigger>
-                <AccordionContent className="py-5 md:text-lg">
+                <AccordionContent className="py-5 text-xs md:text-lg">
                   As a startup accelerator, we are not only helping you building
                   product or market research. We have a bunch of investor behind
                   us. We eager to connect potential startup to investor.{" "}
@@ -104,11 +104,11 @@ export default function Faq() {
                   </span>
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-4" className="py-1 md:py-2">
+              <AccordionItem value="item-4" className="py-2 md:py-2 lg:py-5">
                 <AccordionTrigger className="flex w-full items-center justify-between text-base font-medium md:text-2xl">
                   <p>Why startup powerhouse?</p> <IoIosArrowDown />
                 </AccordionTrigger>
-                <AccordionContent className="py-5 md:text-lg">
+                <AccordionContent className="py-5 text-xs md:text-lg">
                   Startup powerhouse is your one-off complete package partner to
                   launch and grow startup. We are a bunch of software developer,
                   sales, marketer, and designer who work together to create your

@@ -22,7 +22,10 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Service() {
   return (
-    <div className="page-layout flex h-full flex-col justify-center gap-0 border-yellow-600 bg-black px-10 py-14 text-white md:py-24 lg:mt-0 lg:flex-row lg:gap-4 lg:px-44 lg:py-32">
+    <div
+      id="service"
+      className="page-layout flex h-full flex-col justify-center gap-0 border-yellow-600 bg-black px-10 py-14 text-white md:py-24 lg:mt-0 lg:flex-row lg:gap-4 lg:px-44 lg:py-32"
+    >
       <div className="lg:pr-32">
         <h1 className="pb-2 text-center text-2xl font-bold leading-normal md:px-5 md:text-3xl md:leading-relaxed lg:px-0 lg:text-left lg:text-5xl lg:leading-normal">
           We can help you in:

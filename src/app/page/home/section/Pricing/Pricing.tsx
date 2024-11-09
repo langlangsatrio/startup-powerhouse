@@ -4,7 +4,10 @@ import CardPrice from "@/components/CardPrice/CardPrice";
 
 export default function Pricing() {
   return (
-    <div className="page-layout flex h-full flex-col items-center justify-center gap-0 bg-white px-10 py-14 md:py-24 lg:mt-0 lg:flex-col lg:gap-4 lg:px-44 lg:py-32">
+    <div
+      id="pricing"
+      className="page-layout flex h-full flex-col items-center justify-center gap-0 bg-white px-10 py-14 md:py-24 lg:mt-0 lg:flex-col lg:gap-4 lg:px-44 lg:py-32"
+    >
       <Badge
         variant={"outline"}
         className="mb-4 flex w-fit flex-col gap-1 px-3 py-1 shadow-sm"
