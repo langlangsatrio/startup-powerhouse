@@ -30,16 +30,22 @@ export default function Navbar() {
             </div>
             <div className="menu hidden md:gap-3 lg:flex">
               <ul className="flex gap-10">
-                <li>
+                <li className="cursor-pointer hover:font-semibold">
                   <Link href="/#service">Service</Link>
                 </li>
-                <li>
+                <li className="cursor-pointer hover:font-semibold">
                   <Link href="/#pricing">Pricing</Link>
                 </li>
-                <li>
+                <li className="cursor-pointer hover:font-semibold">
+                  <Link href="/page/resource/">Resource</Link>
+                </li>
+                <li className="cursor-pointer hover:font-semibold">
                   <Link href="/page/about-us/">About</Link>
                 </li>
-                <li>
+                <li className="cursor-pointer hover:font-semibold">
+                  <Link href="/page/team/">Team</Link>
+                </li>
+                <li className="cursor-pointer hover:font-semibold">
                   <Link href="/#contact">Contact</Link>
                 </li>
               </ul>
@@ -66,13 +72,23 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className="my-2 list-none">
-                  <Link href="/#pricing" className="font-semibold">
+                  <Link href="/#pricing-phone" className="font-semibold">
                     Pricing
+                  </Link>
+                </li>
+                <li className="my-2 list-none">
+                  <Link href="/page/resource/" className="font-semibold">
+                    Resource
                   </Link>
                 </li>
                 <li className="my-2 list-none">
                   <Link href="/page/about-us/" className="font-semibold">
                     About
+                  </Link>
+                </li>
+                <li className="my-2 list-none">
+                  <Link href="/page/team" className="font-semibold">
+                    Team
                   </Link>
                 </li>
                 <li className="my-2 list-none">

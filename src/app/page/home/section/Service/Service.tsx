@@ -6,8 +6,6 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { GoArrowUpRight } from "react-icons/go";
-import { IoCall } from "react-icons/io5";
-import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -19,13 +17,11 @@ import { IoIosCall } from "react-icons/io";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 export default function Service() {
   return (
-    <div
-      id="service"
-      className="page-layout flex h-full flex-col justify-center gap-0 border-yellow-600 bg-black px-10 py-14 text-white md:py-24 lg:mt-0 lg:flex-row lg:gap-4 lg:px-44 lg:py-32"
-    >
+    <div className="page-layout flex h-full flex-col justify-center gap-0 border-yellow-600 bg-black px-10 py-14 text-white md:py-24 lg:mt-0 lg:flex-row lg:gap-4 lg:px-44 lg:py-32">
       <div className="lg:pr-32">
         <h1 className="pb-2 text-center text-2xl font-bold leading-normal md:px-5 md:text-3xl md:leading-relaxed lg:px-0 lg:text-left lg:text-5xl lg:leading-normal">
           We can help you in:
@@ -58,15 +54,7 @@ export default function Service() {
             </AccordionTrigger>
             <AccordionContent className="pb-6 pt-2 lg:pb-10 lg:pt-4">
               <div className="flex flex-col">
-                <div className="flex w-full flex-row justify-between">
-                  <Image
-                    src="/servicecover.jpg"
-                    alt="servicecover"
-                    width={350}
-                    height={50}
-                    className=""
-                  />
-                </div>
+                <div className="flex w-full flex-row justify-between"></div>
                 <p className="mb-2 leading-relaxed lg:text-lg">
                   We build a high-quality fully-functioning Web Application MVP.
                   With engaging copy and proper branding identity guide. We
@@ -80,12 +68,14 @@ export default function Service() {
                   >
                     Book a call
                   </Button>
-                  <Button
-                    className="h-fit w-fit bg-gray-900 text-xs"
-                    variant={"default"}
-                  >
-                    Learn More
-                  </Button>
+                  <Link href={"/page/services/mvp-development"}>
+                    <Button
+                      className="h-fit w-fit bg-gray-900 text-xs"
+                      variant={"default"}
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </AccordionContent>
@@ -96,15 +86,7 @@ export default function Service() {
             </AccordionTrigger>
             <AccordionContent className="pb-6 pt-2 lg:pb-10 lg:pt-4">
               <div className="flex flex-col">
-                <div className="flex w-full flex-row justify-between">
-                  <Image
-                    src="/servicecover.jpg"
-                    alt="servicecover"
-                    width={350}
-                    height={50}
-                    className=""
-                  />
-                </div>
+                <div className="flex w-full flex-row justify-between"></div>
                 <p className="mb-2 leading-relaxed lg:text-lg">
                   We build a high-quality fully-functioning Web Application MVP.
                   With engaging copy and proper branding identity guide. We
@@ -118,12 +100,14 @@ export default function Service() {
                   >
                     Book a call
                   </Button>
-                  <Button
-                    className="h-fit w-fit bg-gray-900 text-xs"
-                    variant={"default"}
-                  >
-                    Learn More
-                  </Button>
+                  <Link href={"/page/services/landing-page"}>
+                    <Button
+                      className="h-fit w-fit bg-gray-900 text-xs"
+                      variant={"default"}
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </AccordionContent>
@@ -134,15 +118,7 @@ export default function Service() {
             </AccordionTrigger>
             <AccordionContent className="pb-6 pt-2 lg:pb-10 lg:pt-4">
               <div className="flex flex-col">
-                <div className="flex w-full flex-row justify-between">
-                  <Image
-                    src="/servicecover.jpg"
-                    alt="servicecover"
-                    width={350}
-                    height={50}
-                    className=""
-                  />
-                </div>
+                <div className="flex w-full flex-row justify-between"></div>
                 <p className="mb-2 leading-relaxed lg:text-lg">
                   We build a high-quality fully-functioning Web Application MVP.
                   With engaging copy and proper branding identity guide. We
@@ -156,50 +132,14 @@ export default function Service() {
                   >
                     Book a call
                   </Button>
-                  <Button
-                    className="h-fit w-fit bg-gray-900 text-xs"
-                    variant={"default"}
-                  >
-                    Learn More
-                  </Button>
-                </div>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-4" className="rounded-md px-3">
-            <AccordionTrigger className="text-lg font-bold lg:text-xl">
-              User Aqcuisition
-            </AccordionTrigger>
-            <AccordionContent className="pb-6 pt-2 lg:pb-10 lg:pt-4">
-              <div className="flex flex-col">
-                <div className="flex w-full flex-row justify-between">
-                  <Image
-                    src="/servicecover.jpg"
-                    alt="servicecover"
-                    width={350}
-                    height={50}
-                    className=""
-                  />
-                </div>
-                <p className="mb-2 leading-relaxed lg:text-lg">
-                  We build a high-quality fully-functioning Web Application MVP.
-                  With engaging copy and proper branding identity guide. We
-                  deliver a market-ready product and could iterate based on the
-                  market validation stage.
-                </p>
-                <div className="flex gap-2 pt-4">
-                  <Button
-                    className="h-fit w-fit bg-gray-900 text-xs lg:hidden"
-                    variant={"default"}
-                  >
-                    Book a call
-                  </Button>
-                  <Button
-                    className="h-fit w-fit bg-gray-900 text-xs"
-                    variant={"default"}
-                  >
-                    Learn More
-                  </Button>
+                  <Link href={"/page/services/market-research"}>
+                    <Button
+                      className="h-fit w-fit bg-gray-900 text-xs"
+                      variant={"default"}
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </AccordionContent>
@@ -208,7 +148,7 @@ export default function Service() {
       </div>
       <div className="hidden w-full lg:block">
         <Tabs defaultValue="MVP" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 gap-4 px-2">
+          <TabsList className="flex w-full justify-between px-4">
             <TabsTrigger className="mx-1 text-xs" value="MVP">
               MVP Development
             </TabsTrigger>
@@ -217,9 +157,6 @@ export default function Service() {
             </TabsTrigger>
             <TabsTrigger className="mx-1 text-xs" value="Market">
               Market Research
-            </TabsTrigger>
-            <TabsTrigger className="mx-1 text-xs" value="User">
-              User Acquisition
             </TabsTrigger>
           </TabsList>
           <TabsContent value="MVP">
@@ -239,11 +176,12 @@ export default function Service() {
               </CardContent>
               <CardFooter className="flex gap-2">
                 <Button>
-                  <IoCall />
-                  Book a call
-                </Button>
-                <Button>
-                  Learn More <GoArrowUpRight />
+                  <Link
+                    href={"/page/services/mvp-development"}
+                    className="flex items-center justify-center gap-2"
+                  >
+                    Learn More <GoArrowUpRight />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -265,11 +203,12 @@ export default function Service() {
               </CardContent>
               <CardFooter className="flex gap-2">
                 <Button>
-                  <IoCall />
-                  Book a call
-                </Button>
-                <Button>
-                  Learn More <GoArrowUpRight />
+                  <Link
+                    href={"/page/services/landing-page"}
+                    className="flex items-center justify-center gap-2"
+                  >
+                    Learn More <GoArrowUpRight />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -291,37 +230,12 @@ export default function Service() {
               </CardContent>
               <CardFooter className="flex gap-2">
                 <Button>
-                  <IoCall />
-                  Book a call
-                </Button>
-                <Button>
-                  Learn More <GoArrowUpRight />
-                </Button>
-              </CardFooter>
-            </Card>
-          </TabsContent>
-          <TabsContent value="User">
-            <Card>
-              <CardHeader>
-                <CardTitle>User Acquisition</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="space-y-1">
-                  <p>
-                    We build a high-quality fully-functioning Web Application
-                    MVP. With engaging copy and proper branding identity guide.
-                    We deliver a market-ready product and could iterate based on
-                    the market validation stage.
-                  </p>
-                </div>
-              </CardContent>
-              <CardFooter className="flex gap-2">
-                <Button>
-                  <IoCall />
-                  Book a call
-                </Button>
-                <Button>
-                  Learn More <GoArrowUpRight />
+                  <Link
+                    href={"/page/services/market-research"}
+                    className="flex items-center justify-center gap-2"
+                  >
+                    Learn More <GoArrowUpRight />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>

@@ -1,6 +1,7 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { RiInstagramLine } from "react-icons/ri";
 import { AiOutlineYoutube } from "react-icons/ai";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -26,13 +27,13 @@ export default function Footer() {
       <div className="footer-down">
         <div className="flex w-full basis-1/2 list-none flex-wrap justify-center gap-2 border-t border-t-gray-500 pt-5 text-xs text-gray-500 lg:justify-end lg:gap-8 lg:text-base">
           <li>
-            <a>Privacy Policy</a>
+            <Link href="#">Privacy Policy</Link>
           </li>
           <li>
-            <a>Terms of Use</a>
+            <Link href="#">Terms of Use</Link>
           </li>
           <li>
-            <a>GDPR (For European Citizen)</a>
+            <Link href="#">GDPR (For European Citizen)</Link>
           </li>
         </div>
       </div>

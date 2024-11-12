@@ -9,6 +9,8 @@ import { SiLighthouse } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { IoIosArrowDown } from "react-icons/io";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+
 export default function Faq() {
   return (
     <div className="page-layout flex h-full flex-col items-center justify-center gap-10 px-10 py-14 md:pb-24 md:pt-10 lg:mt-0 lg:flex-col lg:items-start lg:justify-start lg:gap-20 lg:px-52 lg:pb-20 lg:pt-10">
@@ -19,7 +21,7 @@ export default function Faq() {
         >
           <h4 className="text-center text-base font-semibold">Profile</h4>
         </Badge>
-        <h1 className="mb-2 text-center text-3xl font-bold leading-normal md:px-5 md:text-3xl md:leading-relaxed lg:px-44 lg:text-5xl lg:leading-normal">
+        <h1 className="mb-2 text-center text-2xl font-bold leading-normal md:px-5 md:text-3xl md:leading-relaxed lg:px-44 lg:text-5xl lg:leading-normal">
           A glimpse of us..
         </h1>
         <p className="text-center text-base lg:text-lg">
@@ -45,7 +47,9 @@ export default function Faq() {
                   navigating them in market validation stage.{" "}
                 </span>
               </p>
-              <Button className="w-full">Learn more about us</Button>
+              <Link href={"/page/about-us"} className="w-full">
+                <Button className="w-full">Learn more about us</Button>
+              </Link>
             </CardContent>
           </Card>
         </div>

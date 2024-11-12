@@ -15,7 +15,7 @@ export default function Pricing() {
         <h4 className="text-center text-base font-semibold">Pricing</h4>
       </Badge>
       <h1 className="text-center text-2xl font-bold leading-normal md:px-5 md:text-3xl md:leading-relaxed lg:px-44 lg:text-5xl lg:leading-normal">
-        So.. Ready to launch your startup?
+        Ready to launch your startup?
       </h1>
       <p className="pb-10 text-center text-sm lg:text-lg">
         One-off project-based contract. No extra-cost.{" "}

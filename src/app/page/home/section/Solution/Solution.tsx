@@ -35,6 +35,7 @@ export default function Solution() {
             component={<GrValidate className="md:w-18 h-fit w-11" />}
           />
         </div>
+        <div id="service"></div>
       </div>
     </div>
   );

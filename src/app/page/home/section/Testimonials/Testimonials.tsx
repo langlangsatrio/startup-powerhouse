@@ -79,7 +79,7 @@ export default function Testimonials() {
             Proudly Empowering:
           </h1>
         </div>
-        <div className="w-screen md:px-20 lg:px-52">
+        <div id="pricing-phone" className="w-screen md:px-20 lg:px-52">
           <Marquee
             className="flex"
             gradient={true}
