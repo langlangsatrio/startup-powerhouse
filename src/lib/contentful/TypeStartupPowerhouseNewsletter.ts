@@ -34,21 +34,3 @@ export type TypeStartupPowerhouseNewsletter<
   Modifiers extends ChainModifiers,
   Locales extends LocaleCode = LocaleCode,
 > = Entry<TypeStartupPowerhouseNewsletterSkeleton, Modifiers, Locales>;
-
-export interface TypeStartupPowerhouseNewsletterFieldsNEW {
-  title: EntryFieldTypes.Symbol;
-  excerpt: EntryFieldTypes.Symbol;
-  image: {
-    sys: { id: string };
-    fields: {
-      file: {
-        url: string;
-        fileName?: string;
-        contentType?: string;
-      };
-    };
-  };
-  date: EntryFieldTypes.Date;
-  body: EntryFieldTypes.RichText;
-  slug: EntryFieldTypes.Symbol;
-}

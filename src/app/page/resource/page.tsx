@@ -3,7 +3,7 @@ import contentfulClient from "@/lib/contentful/contentfulClient";
 import {
   TypeStartupPowerhouseNewsletterSkeleton,
   TypeStartupPowerhouseNewsletterImage,
-  TypeStartupPowerhouseNewsletterFields,
+  TypeStartupPowerhouseNewsletter,
 } from "@/lib/contentful/TypeStartupPowerhouseNewsletter";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -13,13 +13,13 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { LocaleCode, ChainModifiers } from "contentful";
 
 const NewsletterListPage = () => {
   const [newsletterData, setNewsletter] =
-    useState<TypeStartupPowerhouseNewsletterFields | null>(null);
-  const [filterData, setFilterData] = useState<
-    TypeStartupPowerhouseNewsletterFields[] | null
-  >(null);
+    useState<TypeStartupPowerhouseNewsletter<ChainModifiers, LocaleCode>[]>();
+  const [filterData, setFilterData] =
+    useState<TypeStartupPowerhouseNewsletter<ChainModifiers, LocaleCode>[]>();
   const router = useRouter();
   useEffect(() => {
     const GetNewsletter = async () => {
@@ -39,12 +39,16 @@ const NewsletterListPage = () => {
     GetNewsletter();
   }, []);
 
-  const onSearch = (e) => {
+  const onSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchWord = e.target.value.toLowerCase();
     console.log(searchWord);
-    const filter = newsletterData?.filter((item) =>
-      item.fields.title.toLowerCase().includes(searchWord),
-    );
+    if (!newsletterData) {
+      return;
+    }
+    const filter = newsletterData?.filter((item) => {
+      const word = item.fields.title as string;
+      return word.toLowerCase().includes(searchWord);
+    });
     if (searchWord === "") {
       setFilterData(newsletterData);
     } else {
@@ -52,21 +56,30 @@ const NewsletterListPage = () => {
     }
   };
 
-  const printData = (input) => {
+  const printData = (
+    input:
+      | TypeStartupPowerhouseNewsletter<ChainModifiers, LocaleCode>[]
+      | undefined,
+  ) => {
+    console.log(input);
     return input?.map((value, index: number) => (
       <Card key={index} className="h-full w-full">
-        <Link href={`/page/resource/${value.fields.slug}`}>
+        <Link href={`/page/resource/${value?.fields?.slug}`}>
           <CardHeader>
-            <h1 className="font-bold">{value.fields.title}</h1>
-            <p>{value.fields.date}</p>
+            <h1 className="font-bold">
+              {value?.fields?.title as unknown as string}
+            </h1>
+            <p>{value?.fields?.date as unknown as string}</p>
           </CardHeader>
         </Link>
         <CardContent>
           <img
             className="mb-3 rounded-lg"
-            src={`${(value.fields.image as TypeStartupPowerhouseNewsletterImage).fields.file.url}`}
+            src={`${(value.fields.image as unknown as TypeStartupPowerhouseNewsletterImage).fields.file.url}`}
           />
-          <p className="mb-3 text-justify text-sm">{value.fields.excerpt}</p>
+          <p className="mb-3 text-justify text-sm">
+            {value.fields.excerpt as unknown as string}
+          </p>
           <Button
             className="w-full cursor-pointer"
             onClick={() => router.push(`/page/resource/${value.fields.slug}`)}

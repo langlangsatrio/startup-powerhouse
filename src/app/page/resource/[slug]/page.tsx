@@ -9,8 +9,8 @@ import { useEffect, useState } from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { useRouter } from "next/navigation";
 import { LocaleCode, ChainModifiers } from "contentful";
+import { Document as RichTextDocument } from "@contentful/rich-text-types";
 
 interface IAcceptInput {
   params: Promise<{ slug: string }>;
@@ -19,9 +19,9 @@ interface IAcceptInput {
 const BlogDetailPage: React.FC<IAcceptInput> = ({ params }: IAcceptInput) => {
   const [blogData, setBlogData] =
     useState<TypeStartupPowerhouseNewsletter<ChainModifiers, LocaleCode>>();
-  const [alsoRead, setAlsoRead] =
-    useState<TypeStartupPowerhouseNewsletter<ChainModifiers, LocaleCode>[]>();
-  const router = useRouter();
+  // const [alsoRead, setAlsoRead] =
+  //   useState<TypeStartupPowerhouseNewsletter<ChainModifiers, LocaleCode>[]>();
+  // const router = useRouter();
 
   useEffect(() => {
     const fetchDetailBlog = async () => {
@@ -48,8 +48,7 @@ const BlogDetailPage: React.FC<IAcceptInput> = ({ params }: IAcceptInput) => {
     fetchDetailBlog();
   }, [params]);
 
-  console.log("Ini state alsoRead: ", alsoRead);
-  console.log("Ini state blogData", blogData);
+  console.log(blogData?.fields.body);
   if (!blogData) {
     return <div>error</div>;
   }
@@ -60,17 +59,18 @@ const BlogDetailPage: React.FC<IAcceptInput> = ({ params }: IAcceptInput) => {
         <div className="maincontent flex flex-col">
           <div className="title py-3">
             <h1 className="text-justify text-xl font-bold md:text-4xl md:leading-normal lg:text-left lg:text-5xl lg:leading-relaxed">
-              {blogData.fields?.title}
+              {blogData?.fields?.title as string}{" "}
+              {/**Harus ada tipenya, kalau gakl gitu typscript error */}
             </h1>
           </div>
           <div className="excerpt">
             <p className="pt-2 text-justify text-sm md:text-lg lg:pb-4 lg:text-xl lg:leading-relaxed">
-              {blogData.fields?.excerpt}
+              {blogData?.fields?.excerpt as string}
             </p>
           </div>
           <div className="date flex items-center justify-between pb-2 md:pb-4 lg:pb-6">
             <p className="py-3 text-justify text-sm md:text-lg lg:text-xl lg:leading-relaxed">
-              {blogData.fields?.date}
+              {blogData?.fields?.date as string}
             </p>
             <div className="flex items-center justify-center gap-5">
               <FaXTwitter className="md:h-7 md:w-7" />
@@ -86,7 +86,8 @@ const BlogDetailPage: React.FC<IAcceptInput> = ({ params }: IAcceptInput) => {
             />
           </div>
           <div className="body py-4 lg:py-10 [&>*]:py-2 [&>*]:text-justify [&>*]:lg:py-4 [&>*]:lg:text-xl [&>*]:lg:leading-loose">
-            <RichText document={blogData.fields?.body} />
+            <RichText document={blogData?.fields?.body as RichTextDocument} />{" "}
+            {/**Import tipenya langsung dari richtext karena ini fix datanya pasti tipenya sama */}
           </div>
           <div className="share">
             <div className="h-1 w-full bg-gray-100"></div>
