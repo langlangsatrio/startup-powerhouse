@@ -50,19 +50,19 @@ export default function NumberFigure() {
             </div>
             <div className="the-card-itself counter flex w-1/2 flex-col items-center justify-center py-3">
               <div className="counter my-1 flex w-full items-center justify-center text-4xl font-bold">
-                <p className="">$</p>
-                <CountUp end={5} />
-                <p className="">M</p>
+                <p className=""></p>
+                <CountUp end={90} />
+                <p className="">+</p>
               </div>
-              <p className="">Capital raised</p>
+              <p className="">Job Created</p>
             </div>
             <div className="the-card-itself counter flex w-1/2 flex-col items-center justify-center py-3">
               <div className="counter my-1 flex w-full items-center justify-center text-4xl font-bold">
-                <p className="">$</p>
-                <CountUp end={5} />
-                <p className="">M</p>
+                <p className=""></p>
+                <CountUp end={18} />
+                <p className=""></p>
               </div>
-              <p className="">Capital raised</p>
+              <p className="">Countries</p>
             </div>
           </div>
         </div>

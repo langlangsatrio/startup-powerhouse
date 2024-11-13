@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import RichText from "@/components/richText/richText";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import contentfulClient from "@/lib/contentful/contentfulClient";
@@ -54,9 +55,11 @@ const GetServiceDetails: React.FC<IGetProduct> = ({ id }) => {
         </div>
       </div>
       <div className="w-full pb-6 lg:h-1/2 lg:w-full">
-        <img
+        <Image
           src={`${(fecthedService?.image as unknown as TypeStartupPowerhouseServicesImage).fields.file.url}`}
-          className="h-full w-full rounded-xl shadow-sm"
+          width={1000}
+          height={500}
+          alt={`${fecthedService?.title as unknown as string}`}
         />
       </div>
       <div className="description text-md hidden text-center leading-relaxed lg:mb-5 lg:block lg:py-10 lg:text-left lg:text-xl lg:leading-loose">

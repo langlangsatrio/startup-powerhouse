@@ -19,7 +19,7 @@ export default function Faq() {
           variant={"outline"}
           className="mb-4 flex w-fit flex-col gap-1 px-3 py-1 shadow-sm lg:mb-8"
         >
-          <h4 className="text-center text-base font-semibold">Profile</h4>
+          <h1 className="text-center text-base font-semibold">Profile</h1>
         </Badge>
         <h1 className="mb-2 text-center text-2xl font-bold leading-normal md:px-5 md:text-3xl md:leading-relaxed lg:px-44 lg:text-5xl lg:leading-normal">
           A glimpse of us..

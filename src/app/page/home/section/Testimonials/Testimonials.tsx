@@ -7,14 +7,15 @@ import { FaProductHunt } from "react-icons/fa";
 import { DiTechcrunch } from "react-icons/di";
 import { FaGoogle } from "react-icons/fa";
 import { FaHackerNews } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io5";
 export default function Testimonials() {
   return (
-    <div className="page-layout flex h-full flex-col items-center justify-center gap-0 border-yellow-600 bg-white px-10 pt-14 md:pt-24 lg:mt-0 lg:flex-col lg:gap-4 lg:px-44 lg:pt-32">
+    <div className="page-layout flex h-full flex-col items-center justify-center gap-0 px-10 pt-14 md:pt-24 lg:mt-0 lg:flex-col lg:gap-4 lg:px-44 lg:pt-32">
       <Badge
         variant={"outline"}
         className="mb-4 flex w-fit flex-col gap-1 px-3 py-1 shadow-sm"
       >
-        <h4 className="text-center text-base font-semibold">Testimonials</h4>
+        <h1 className="text-center text-base font-semibold">Testimonials</h1>
       </Badge>
       <h1 className="pb-10 text-center text-2xl font-bold leading-normal md:px-5 md:text-3xl md:leading-relaxed lg:px-44 lg:text-5xl lg:leading-normal">
         Don’t rely on our word alone—let our partners tell you themselves.
@@ -26,29 +27,29 @@ export default function Testimonials() {
         <TestimonialsCard
           testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
           avatarAlias="JM"
-          avatarUrl="https://github.com/shadcn.png"
-          name="James McCarthy"
+          avatarUrl={`/avataricon/elon.webp`}
+          name="Elon the Chief Meme Office"
           socials={<FaXTwitter />}
         />
         <TestimonialsCard
           testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
           avatarAlias="JM"
-          avatarUrl="https://github.com/shadcn.png"
-          name="Oliver Roudler"
+          avatarUrl={`/avataricon/nikitabier.webp`}
+          name="Nikita the Beer"
           socials={<FaXTwitter />}
         />
         <TestimonialsCard
           testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
           avatarAlias="JM"
-          avatarUrl="https://github.com/shadcn.png"
-          name="Beff Jezos"
-          socials={<FaXTwitter />}
+          avatarUrl={`/avataricon/muck.webp`}
+          name="Muck the swag"
+          socials={<IoLogoInstagram />}
         />
         <div className="hidden lg:inline-block">
           <TestimonialsCard
             testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
             avatarAlias="JM"
-            avatarUrl="https://github.com/shadcn.png"
+            avatarUrl={`/avataricon/gigachad.webp`}
             name="Giga Chad"
             socials={<FaXTwitter />}
           />
@@ -57,7 +58,7 @@ export default function Testimonials() {
           <TestimonialsCard
             testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
             avatarAlias="JM"
-            avatarUrl="https://github.com/shadcn.png"
+            avatarUrl={`/avataricon/gigachad.webp`}
             name="James McCarthy"
             socials={<FaXTwitter />}
           />
@@ -66,7 +67,7 @@ export default function Testimonials() {
           <TestimonialsCard
             testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
             avatarAlias="JM"
-            avatarUrl="https://github.com/shadcn.png"
+            avatarUrl={`/avataricon/gigachad.webp`}
             name="James McCarthy"
             socials={<FaXTwitter />}
           />
@@ -75,7 +76,7 @@ export default function Testimonials() {
 
       <div className="pt-8">
         <div>
-          <h1 className="mb-8 mt-3 text-center font-medium text-gray-300 lg:mb-8">
+          <h1 className="mb-8 mt-3 text-center font-medium text-gray-400 lg:mb-8">
             Proudly Empowering:
           </h1>
         </div>

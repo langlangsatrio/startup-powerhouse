@@ -7,7 +7,7 @@ export default function FeaturedIn() {
   return (
     <div className="py-8">
       <div>
-        <h1 className="mb-3 text-center font-medium text-gray-300 lg:mb-8">
+        <h1 className="mb-3 text-center font-medium text-gray-400 lg:mb-8">
           We are featured in:
         </h1>
       </div>

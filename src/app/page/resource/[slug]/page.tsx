@@ -11,6 +11,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { LocaleCode, ChainModifiers } from "contentful";
 import { Document as RichTextDocument } from "@contentful/rich-text-types";
+import Image from "next/image";
 
 interface IAcceptInput {
   params: Promise<{ slug: string }>;
@@ -73,16 +74,33 @@ const BlogDetailPage: React.FC<IAcceptInput> = ({ params }: IAcceptInput) => {
               {blogData?.fields?.date as string}
             </p>
             <div className="flex items-center justify-center gap-5">
-              <FaXTwitter className="md:h-7 md:w-7" />
+              <a
+                href="https://twitter.com/intent/tweet"
+                data-size="large"
+                data-text={`Hey Twitter, just found a cool article from the Startup Powerhouse here:${`<a href={startup-powerhouse-cc.vercel.app/page/resource/${blogData?.fields?.slug}}>`}`}
+                data-url="https://dev.twitter.com/web/tweet-button"
+                data-hashtags="example,demo"
+                data-via="twitterdev"
+                data-related="twitterapi,twitter"
+              >
+                <FaXTwitter className="md:h-7 md:w-7" />
+              </a>
               <FaInstagram className="md:h-7 md:w-7" />
               <MdEmail className="md:h-12 md:w-7" />
             </div>
           </div>
           <div className="image">
-            <img
+            {/* <img
               src={`${(blogData.fields?.image as TypeStartupPowerhouseNewsletterImage).fields?.file?.url}`}
               className="h-full w-full rounded-xl shadow-sm"
               alt={`${(blogData.fields?.image as TypeStartupPowerhouseNewsletterImage).fields.file.fileName}`}
+            /> */}
+            <Image
+              src={`https://${(blogData.fields?.image as TypeStartupPowerhouseNewsletterImage).fields?.file?.url}`}
+              className="h-full w-full rounded-xl shadow-sm"
+              alt={`${blogData.fields?.title as unknown as string}`}
+              width={400}
+              height={150}
             />
           </div>
           <div className="body py-4 lg:py-10 [&>*]:py-2 [&>*]:text-justify [&>*]:lg:py-4 [&>*]:lg:text-xl [&>*]:lg:leading-loose">

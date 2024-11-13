@@ -10,6 +10,9 @@ export default function Navbar() {
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -22,10 +25,14 @@ export default function Navbar() {
           <div className="content flex items-center justify-between">
             <div className="logo flex cursor-pointer flex-col">
               <h1 className="logo-text text-xl font-bold">
-                <Link href="/">Startup</Link>
+                <Link href="/" onClick={closeNavbar}>
+                  Startup
+                </Link>
               </h1>
               <h1 className="logo-text text-xl font-bold">
-                <Link href="/">Powerhouse</Link>
+                <Link href="/" onClick={closeNavbar}>
+                  Powerhouse
+                </Link>
               </h1>
             </div>
             <div className="menu hidden md:gap-3 lg:flex">
@@ -56,7 +63,7 @@ export default function Navbar() {
 
             <div className="hamburger-wrapper flex flex-col border-green-600 lg:hidden">
               <div className="hamburger inline-flex lg:hidden">
-                <Button onClick={toggleNavbar}>
+                <Button onClick={toggleNavbar} aria-label="Menu">
                   {!isOpen ? <GiHamburgerMenu /> : <IoMdClose />}
                 </Button>
               </div>
@@ -67,32 +74,56 @@ export default function Navbar() {
             {isOpen && (
               <div className="menuphone my-3 flex flex-col py-2 lg:hidden">
                 <li className="my-2 list-none">
-                  <Link href="/#service" className="font-semibold">
+                  <Link
+                    href="/#service"
+                    onClick={closeNavbar}
+                    className="font-semibold"
+                  >
                     Service
                   </Link>
                 </li>
                 <li className="my-2 list-none">
-                  <Link href="/#pricing-phone" className="font-semibold">
+                  <Link
+                    href="/#pricing-phone"
+                    onClick={closeNavbar}
+                    className="font-semibold"
+                  >
                     Pricing
                   </Link>
                 </li>
                 <li className="my-2 list-none">
-                  <Link href="/page/resource/" className="font-semibold">
+                  <Link
+                    href="/page/resource/"
+                    onClick={closeNavbar}
+                    className="font-semibold"
+                  >
                     Resource
                   </Link>
                 </li>
                 <li className="my-2 list-none">
-                  <Link href="/page/about-us/" className="font-semibold">
+                  <Link
+                    href="/page/about-us/"
+                    onClick={closeNavbar}
+                    className="font-semibold"
+                  >
                     About
                   </Link>
                 </li>
                 <li className="my-2 list-none">
-                  <Link href="/page/team" className="font-semibold">
+                  <Link
+                    href="/page/team"
+                    onClick={closeNavbar}
+                    className="font-semibold"
+                  >
                     Team
                   </Link>
                 </li>
                 <li className="my-2 list-none">
-                  <Link href="/#contact" className="font-semibold">
+                  <Link
+                    href="/#contact"
+                    onClick={closeNavbar}
+                    className="font-semibold"
+                  >
                     Contact
                   </Link>
                 </li>

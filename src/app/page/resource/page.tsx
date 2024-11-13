@@ -14,6 +14,7 @@ import { FaSearch } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { LocaleCode, ChainModifiers } from "contentful";
+import Image from "next/image";
 
 const NewsletterListPage = () => {
   const [newsletterData, setNewsletter] =
@@ -63,7 +64,11 @@ const NewsletterListPage = () => {
   ) => {
     console.log(input);
     return input?.map((value, index: number) => (
-      <Card key={index} className="h-full w-full">
+      <Card
+        key={index}
+        className="h-full w-full cursor-pointer hover:bg-gray-100"
+        onClick={() => router.push(`/page/resource/${value?.fields?.slug}`)}
+      >
         <Link href={`/page/resource/${value?.fields?.slug}`}>
           <CardHeader>
             <h1 className="font-bold">
@@ -73,9 +78,13 @@ const NewsletterListPage = () => {
           </CardHeader>
         </Link>
         <CardContent>
-          <img
-            className="mb-3 rounded-lg"
-            src={`${(value.fields.image as unknown as TypeStartupPowerhouseNewsletterImage).fields.file.url}`}
+          <Image
+            width={200}
+            height={50}
+            src={`https://${(value.fields.image as unknown as TypeStartupPowerhouseNewsletterImage).fields.file.url}`}
+            alt={value?.fields?.title as unknown as string}
+            className="mb-3 w-full rounded-lg"
+            sizes="(max-width:768px) 100px, 500px"
           />
           <p className="mb-3 text-justify text-sm">
             {value.fields.excerpt as unknown as string}

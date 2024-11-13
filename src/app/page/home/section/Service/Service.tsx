@@ -27,12 +27,13 @@ export default function Service() {
           We can help you in:
         </h1>
         <p className="mb-7 text-center text-base md:mb-9 lg:mb-8 lg:text-left lg:text-xl">
-          We can do beyond. Contact for more inquiries.
+          Who are we and what can we do?
         </p>
-        <p className="mb-8 hidden text-lg leading-loose text-gray-300 lg:block">
-          We specialised in web application and mobile apps MVP development.
-          From landing page, hooks, payment, to user data, we got you covered.
-          You tell us, we ship it. Building a startup has never been this easy.
+        <p className="mb-8 text-center text-xs leading-loose text-gray-300 md:text-left md:text-lg lg:block">
+          We are a tech product builder that specialised in web application and
+          mobile apps MVP development. From landing page, hooks, payment, to
+          user data, we got you covered. You tell us, we ship it. Building a
+          startup has never been this easy.
         </p>
         <div className="hidden gap-3 lg:flex">
           <Button
@@ -73,7 +74,7 @@ export default function Service() {
                       className="h-fit w-fit bg-gray-900 text-xs"
                       variant={"default"}
                     >
-                      Learn More
+                      Explore MVP Services
                     </Button>
                   </Link>
                 </div>
@@ -105,7 +106,7 @@ export default function Service() {
                       className="h-fit w-fit bg-gray-900 text-xs"
                       variant={"default"}
                     >
-                      Learn More
+                      Explore Landing Page Services
                     </Button>
                   </Link>
                 </div>
@@ -137,7 +138,7 @@ export default function Service() {
                       className="h-fit w-fit bg-gray-900 text-xs"
                       variant={"default"}
                     >
-                      Learn More
+                      Explore Research Service
                     </Button>
                   </Link>
                 </div>
@@ -149,13 +150,13 @@ export default function Service() {
       <div className="hidden w-full lg:block">
         <Tabs defaultValue="MVP" className="w-full">
           <TabsList className="flex w-full justify-between px-4">
-            <TabsTrigger className="mx-1 text-xs" value="MVP">
+            <TabsTrigger className="mx-1 text-xs text-gray-600" value="MVP">
               MVP Development
             </TabsTrigger>
-            <TabsTrigger className="mx-1 text-xs" value="Landing">
+            <TabsTrigger className="mx-1 text-xs text-gray-600" value="Landing">
               Landing Page
             </TabsTrigger>
-            <TabsTrigger className="mx-1 text-xs" value="Market">
+            <TabsTrigger className="mx-1 text-xs text-gray-600" value="Market">
               Market Research
             </TabsTrigger>
           </TabsList>
@@ -180,7 +181,10 @@ export default function Service() {
                     href={"/page/services/mvp-development"}
                     className="flex items-center justify-center gap-2"
                   >
-                    Learn More <GoArrowUpRight />
+                    <p>Explore MVP Services</p>
+                    <div>
+                      <GoArrowUpRight />
+                    </div>
                   </Link>
                 </Button>
               </CardFooter>
@@ -207,7 +211,10 @@ export default function Service() {
                     href={"/page/services/landing-page"}
                     className="flex items-center justify-center gap-2"
                   >
-                    Learn More <GoArrowUpRight />
+                    <p className="">Explore Landing Page Services</p>{" "}
+                    <div>
+                      <GoArrowUpRight />
+                    </div>
                   </Link>
                 </Button>
               </CardFooter>
@@ -234,7 +241,10 @@ export default function Service() {
                     href={"/page/services/market-research"}
                     className="flex items-center justify-center gap-2"
                   >
-                    Learn More <GoArrowUpRight />
+                    <p>Explore Research Services</p>
+                    <div>
+                      <GoArrowUpRight />
+                    </div>
                   </Link>
                 </Button>
               </CardFooter>

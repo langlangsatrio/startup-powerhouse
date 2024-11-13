@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-
+import Image from "next/image";
 export default function Magazine() {
   return (
     <div className="page-layout flex h-full flex-col items-start justify-center gap-0 bg-white px-10 pt-10 md:pt-16 lg:mt-0 lg:gap-4 lg:px-44 lg:pt-28">
@@ -34,9 +34,13 @@ export default function Magazine() {
         </div>
       </div>
       <div className="h-auto w-full px-0 md:px-20 lg:px-0">
-        <img
-          src="/backdropbanner.jpg"
-          className="h-auto w-full rounded-xl shadow-md"
+        <Image
+          width={500}
+          height={200}
+          className="w-full rounded-xl shadow-sm"
+          src={`/about-us.webp`}
+          alt="House of the rising sun"
+          sizes="(max-width:768px) 400px, 1000px"
         />
       </div>
     </div>

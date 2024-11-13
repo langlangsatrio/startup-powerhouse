@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import axios from "axios";
 import { useState } from "react";
@@ -69,10 +70,13 @@ const TeamPage = () => {
                       className="flex h-full w-40 flex-col items-center justify-center p-0 shadow-sm shadow-blue-800 md:w-80 md:p-5 md:px-5"
                     >
                       <CardHeader className="m-0 h-fit px-0 pb-3 pt-5 md:px-5">
-                        <img
-                          src={picture?.large}
+                        <Image
+                          src={picture?.large as unknown as string}
                           className="m-0 h-full w-full rounded-lg p-0 md:w-72"
-                          alt="lol"
+                          width={100}
+                          height={100}
+                          sizes="(max-width: 768px) 250px, 400px"
+                          alt={fullname}
                         />
                       </CardHeader>
                       <CardContent className="m-0 flex flex-col items-center justify-center p-0 px-0 pb-3">
@@ -114,10 +118,13 @@ const TeamPage = () => {
                       className="flex h-full w-40 flex-col items-center justify-center p-0 shadow-sm shadow-green-800 md:w-80 md:p-5 md:px-5"
                     >
                       <CardHeader className="m-0 h-fit px-0 pb-3 pt-5 md:px-5">
-                        <img
-                          src={picture?.large}
+                        <Image
+                          src={picture?.large as unknown as string}
                           className="m-0 h-full w-full rounded-lg p-0 md:w-72"
-                          alt="lol"
+                          width={100}
+                          height={100}
+                          sizes="(max-width: 768px) 250px, 400px"
+                          alt={fullname}
                         />
                       </CardHeader>
                       <CardContent className="m-0 flex flex-col items-center justify-center p-0 px-0 pb-3">
@@ -159,10 +166,13 @@ const TeamPage = () => {
                       className="flex h-full w-40 flex-col items-center justify-center p-0 shadow-sm shadow-red-800 md:w-80 md:p-5 md:px-5"
                     >
                       <CardHeader className="m-0 h-fit px-0 pb-3 pt-5 md:px-5">
-                        <img
-                          src={picture?.large}
+                        <Image
+                          src={picture?.large as unknown as string}
                           className="m-0 h-full w-full rounded-lg p-0 md:w-72"
-                          alt="lol"
+                          width={100}
+                          height={100}
+                          sizes="(max-width: 768px) 250px, 400px"
+                          alt={fullname}
                         />
                       </CardHeader>
                       <CardContent className="m-0 flex flex-col items-center justify-center p-0 px-0 pb-3">
@@ -204,10 +214,13 @@ const TeamPage = () => {
                       className="flex h-full w-40 flex-col items-center justify-center p-0 shadow-sm shadow-orange-800 md:w-80 md:p-5 md:px-5"
                     >
                       <CardHeader className="m-0 h-fit px-0 pb-3 pt-5 md:px-5">
-                        <img
-                          src={picture?.large}
+                        <Image
+                          src={picture?.large as unknown as string}
                           className="m-0 h-full w-full rounded-lg p-0 md:w-72"
-                          alt="lol"
+                          width={100}
+                          height={100}
+                          sizes="(max-width: 768px) 250px, 400px"
+                          alt={fullname}
                         />
                       </CardHeader>
                       <CardContent className="m-0 flex flex-col items-center justify-center p-0 px-0 pb-3">

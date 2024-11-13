@@ -6,26 +6,26 @@ import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { BsArrowRepeat } from "react-icons/bs";
 export default function Jumbotron() {
   return (
-    <div className="page-layout h-full py-6 px-10 flex justify-center md:py-10 ">
+    <div className="page-layout flex h-full justify-center px-10 py-6 md:py-10">
       {/** Yang div atas ini penampung ya */}
       {/**Yang div bawah ini isi Konten doang */}
-      <div className="flex flex-col gap-4 justify-center items-center  w-fit h-fit z-10 lg:gap-10 lg:px-32">
+      <div className="z-10 flex h-fit w-fit flex-col items-center justify-center gap-4 lg:gap-10 lg:px-32">
         <Badge
           variant={"outline"}
-          className="w-fit flex flex-col px-3 py-1 gap-1 shadow-sm"
+          className="flex w-fit flex-col gap-1 px-3 py-1 shadow-sm"
         >
-          <h4 className="font-semibold  text-xs text-center">
+          <h1 className="text-center text-xs font-semibold">
             Startup Award 2025
-          </h4>
+          </h1>
         </Badge>
-        <h1 className="font-black text-5xl text-center leading-tight mb-3 md:text-6xl md:leading-snug lg:leading-normal">
+        <h1 className="mb-3 text-center text-5xl font-black leading-tight md:text-6xl md:leading-snug lg:leading-normal">
           Speedrunning your MVP creation and development at affordable price.{" "}
           <span className="hidden lg:inline">
             Helping you build, test, and scale with ease.
           </span>
         </h1>
 
-        <p className="font-medium text-lg text-center text-gray-500 mb-2 md:text-2xl md:mb-5">
+        <p className="mb-2 text-center text-lg font-medium text-gray-500 md:mb-5 md:text-2xl">
           We take your <span className="font-bold text-black">ideas</span> to{" "}
           <span className="font-bold text-black">market-fit</span> in weeks, not
           months.{" "}
@@ -34,17 +34,20 @@ export default function Jumbotron() {
             <BsArrowRepeat color="gray" className="hidden lg:inline" />{" "}
           </span>
         </p>
-        <div className="lg:flex lg:gap-3 mb-1">
-          <Button className="flex gap-3 px-3 py-1 rounded-xl shadow-md md:py-7 md:px-6 lg:mb-4">
+        <div className="mb-1 lg:flex lg:gap-3">
+          <Button className="flex gap-3 rounded-xl px-3 py-1 shadow-md md:px-6 md:py-7 lg:mb-4">
             <Avatar>
               <AvatarImage
                 src="./main-photo.jpeg"
                 alt="@satrio"
-                className="rounded-full border-2 max-h-6 md:max-h-8"
+                className="w-[28px] rounded-full border-2 md:w-[40px]"
+                width={100}
+                height={100}
+                sizes="(max-width:768px) 28px, 40px"
               />
               <AvatarFallback>SLB</AvatarFallback>
             </Avatar>{" "}
-            <p className="font-light text-sm md:text-lg md:font-medium">
+            <p className="text-sm font-light md:text-lg md:font-medium">
               Claim your free strategy call with Satrio
             </p>
           </Button>
