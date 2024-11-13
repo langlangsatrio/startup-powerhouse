@@ -28,7 +28,7 @@ export default function Testimonials() {
           testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
           avatarAlias="JM"
           avatarUrl={`/avataricon/elon.webp`}
-          name="Elon the Chief Meme Office"
+          name="Elon Chief Meme Officer"
           socials={<FaXTwitter />}
         />
         <TestimonialsCard
@@ -49,7 +49,7 @@ export default function Testimonials() {
           <TestimonialsCard
             testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
             avatarAlias="JM"
-            avatarUrl={`/avataricon/gigachad.webp`}
+            avatarUrl={`/avataricon/nikitabier.webp`}
             name="Giga Chad"
             socials={<FaXTwitter />}
           />
@@ -58,7 +58,7 @@ export default function Testimonials() {
           <TestimonialsCard
             testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
             avatarAlias="JM"
-            avatarUrl={`/avataricon/gigachad.webp`}
+            avatarUrl={`/avataricon/muck.webp`}
             name="James McCarthy"
             socials={<FaXTwitter />}
           />
@@ -67,7 +67,7 @@ export default function Testimonials() {
           <TestimonialsCard
             testimonials="Startup Powerhouse has really helped me to launch my startup. They were so details, perfectly fullfiled my request and navigate me through the validation stage."
             avatarAlias="JM"
-            avatarUrl={`/avataricon/gigachad.webp`}
+            avatarUrl={`/avataricon/elon.webp`}
             name="James McCarthy"
             socials={<FaXTwitter />}
           />
@@ -76,7 +76,7 @@ export default function Testimonials() {
 
       <div className="pt-8">
         <div>
-          <h1 className="mb-8 mt-3 text-center font-medium text-gray-400 lg:mb-8">
+          <h1 className="mb-8 mt-3 text-center font-medium text-gray-800 lg:mb-8">
             Proudly Empowering:
           </h1>
         </div>

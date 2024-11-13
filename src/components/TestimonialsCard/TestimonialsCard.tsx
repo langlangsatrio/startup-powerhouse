@@ -32,7 +32,7 @@ const TestimonialsCard: React.FC<ITestimonialsCard> = ({
                 alt={avatarAlias}
                 width={100}
                 height={100}
-                className="w-[28px] rounded-full border-2 md:w-[40px]"
+                className="w-[40px] rounded-full border-2 md:w-[40px]"
                 sizes="(max-width:768px) 28px, 40px"
               />
               <AvatarFallback>{avatarAlias}</AvatarFallback>

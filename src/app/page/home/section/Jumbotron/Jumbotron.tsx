@@ -38,7 +38,7 @@ export default function Jumbotron() {
           <Button className="flex gap-3 rounded-xl px-3 py-1 shadow-md md:px-6 md:py-7 lg:mb-4">
             <Avatar>
               <AvatarImage
-                src="./main-photo.jpeg"
+                src={`/avataricon/myphoto.webp`}
                 alt="@satrio"
                 className="w-[28px] rounded-full border-2 md:w-[40px]"
                 width={100}

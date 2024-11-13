@@ -51,7 +51,7 @@ export default function Service() {
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1" className="rounded-md px-3">
             <AccordionTrigger className="text-lg font-bold lg:text-xl">
-              MVP Development
+              <h1>MVP Development</h1>
             </AccordionTrigger>
             <AccordionContent className="pb-6 pt-2 lg:pb-10 lg:pt-4">
               <div className="flex flex-col">
@@ -83,7 +83,7 @@ export default function Service() {
           </AccordionItem>
           <AccordionItem value="item-2" className="rounded-md px-3">
             <AccordionTrigger className="text-lg font-bold lg:text-xl">
-              Landing Page
+              <h1>Landing Page</h1>
             </AccordionTrigger>
             <AccordionContent className="pb-6 pt-2 lg:pb-10 lg:pt-4">
               <div className="flex flex-col">
@@ -115,7 +115,7 @@ export default function Service() {
           </AccordionItem>
           <AccordionItem value="item-3" className="rounded-md px-3">
             <AccordionTrigger className="text-lg font-bold lg:text-xl">
-              Market Research
+              <h1>Market Research</h1>
             </AccordionTrigger>
             <AccordionContent className="pb-6 pt-2 lg:pb-10 lg:pt-4">
               <div className="flex flex-col">
@@ -176,17 +176,17 @@ export default function Service() {
                 </div>
               </CardContent>
               <CardFooter className="flex gap-2">
-                <Button>
-                  <Link
-                    href={"/page/services/mvp-development"}
-                    className="flex items-center justify-center gap-2"
-                  >
+                <Link
+                  href={"/page/services/mvp-development"}
+                  className="flex items-center justify-center gap-2"
+                >
+                  <Button>
                     <p>Explore MVP Services</p>
                     <div>
                       <GoArrowUpRight />
                     </div>
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           </TabsContent>
@@ -206,17 +206,17 @@ export default function Service() {
                 </div>
               </CardContent>
               <CardFooter className="flex gap-2">
-                <Button>
-                  <Link
-                    href={"/page/services/landing-page"}
-                    className="flex items-center justify-center gap-2"
-                  >
+                <Link
+                  href={"/page/services/landing-page"}
+                  className="flex items-center justify-center gap-2"
+                >
+                  <Button>
                     <p className="">Explore Landing Page Services</p>{" "}
                     <div>
                       <GoArrowUpRight />
                     </div>
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           </TabsContent>
@@ -236,17 +236,17 @@ export default function Service() {
                 </div>
               </CardContent>
               <CardFooter className="flex gap-2">
-                <Button>
-                  <Link
-                    href={"/page/services/market-research"}
-                    className="flex items-center justify-center gap-2"
-                  >
-                    <p>Explore Research Services</p>
+                <Link
+                  href={"/page/services/market-research"}
+                  className="flex items-center justify-center gap-2"
+                >
+                  <p>Explore Research Services</p>
+                  <Button>
                     <div>
                       <GoArrowUpRight />
                     </div>
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           </TabsContent>

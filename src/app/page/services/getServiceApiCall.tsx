@@ -56,10 +56,11 @@ const GetServiceDetails: React.FC<IGetProduct> = ({ id }) => {
       </div>
       <div className="w-full pb-6 lg:h-1/2 lg:w-full">
         <Image
-          src={`${(fecthedService?.image as unknown as TypeStartupPowerhouseServicesImage).fields.file.url}`}
-          width={1000}
+          src={`https://${(fecthedService?.image as unknown as TypeStartupPowerhouseServicesImage).fields.file.url}`}
+          width={2000}
           height={500}
           alt={`${fecthedService?.title as unknown as string}`}
+          className="rounded-xl"
         />
       </div>
       <div className="description text-md hidden text-center leading-relaxed lg:mb-5 lg:block lg:py-10 lg:text-left lg:text-xl lg:leading-loose">

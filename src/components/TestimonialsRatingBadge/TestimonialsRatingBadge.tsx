@@ -7,32 +7,40 @@ export default function TestimonialsRatingBadge() {
       <div className="flex items-center">
         <Avatar>
           <AvatarImage
-            src="https://github.com/shadcn.png"
+            src={`/avataricon/muck.webp`}
             alt="User"
+            width={100}
+            height={100}
             className="border-20 w-10 rounded-full border border-white shadow-lg md:w-10"
           />
           <AvatarFallback>Shipper</AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarImage
-            src="https://github.com/shadcn.png"
+            src={`/avataricon/elon.webp`}
             alt="User"
+            width={100}
+            height={100}
             className="border-20 w-10 rounded-full border border-white shadow-lg md:w-10"
           />
           <AvatarFallback>Shipper</AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarImage
-            src="https://github.com/shadcn.png"
+            src={`/avataricon/myphoto.webp`}
             alt="User"
+            width={100}
+            height={100}
             className="border-20 w-10 rounded-full border border-white shadow-lg md:w-10"
           />
           <AvatarFallback>Shipper</AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarImage
-            src="https://github.com/shadcn.png"
+            src={`/avataricon/nikitabier.webp`}
             alt="User"
+            width={100}
+            height={100}
             className="border-20 w-10 rounded-full border border-white shadow-lg md:w-10"
           />
           <AvatarFallback>Shipper</AvatarFallback>
