@@ -58,7 +58,11 @@ export default function Navbar() {
               </ul>
             </div>
             <div className="cta hidden lg:flex">
-              <Button>Book a call now</Button>
+              <Link
+                href={`https://cal.com/satrio-langlang-vlenyy/introductorycall`}
+              >
+                <Button>Book a call now</Button>
+              </Link>
             </div>
 
             <div className="hamburger-wrapper flex flex-col border-green-600 lg:hidden">

@@ -2,6 +2,7 @@ import { Button } from "../ui/button";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { FaCheckCircle } from "react-icons/fa";
+import Link from "next/link";
 
 interface ICardPrice {
   badge?: string;
@@ -51,7 +52,11 @@ const CardPrice: React.FC<ICardPrice> = ({
           </div>
         </CardContent>
         <CardFooter>
-          <Button className="w-full">Book your slot</Button>
+          <Link
+            href={`https://cal.com/satrio-langlang-vlenyy/introductorycall`}
+          >
+            <Button className="w-full">Book your slot</Button>
+          </Link>
         </CardFooter>
       </Card>
     </div>

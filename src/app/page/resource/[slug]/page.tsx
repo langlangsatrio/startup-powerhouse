@@ -11,7 +11,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { LocaleCode, ChainModifiers } from "contentful";
 import { Document as RichTextDocument } from "@contentful/rich-text-types";
-import Image from "next/image";
+import Image, { ImageLoader, ImageLoaderProps } from "next/image";
 
 interface IAcceptInput {
   params: Promise<{ slug: string }>;
@@ -53,6 +53,13 @@ const BlogDetailPage: React.FC<IAcceptInput> = ({ params }: IAcceptInput) => {
   if (!blogData) {
     return <div>error</div>;
   }
+
+  const contentfulImageLoader: ImageLoader = ({
+    src,
+    width,
+  }: ImageLoaderProps) => {
+    return `${src}?w=${width}`;
+  };
 
   return (
     <div>
@@ -101,6 +108,7 @@ const BlogDetailPage: React.FC<IAcceptInput> = ({ params }: IAcceptInput) => {
               alt={`${blogData.fields?.title as unknown as string}`}
               width={400}
               height={150}
+              loader={contentfulImageLoader}
             />
           </div>
           <div className="body py-4 lg:py-10 [&>*]:py-2 [&>*]:text-justify [&>*]:lg:py-4 [&>*]:lg:text-xl [&>*]:lg:leading-loose">

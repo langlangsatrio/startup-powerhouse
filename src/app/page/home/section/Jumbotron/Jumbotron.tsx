@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+import Link from "next/link";
 import { BsArrowRepeat } from "react-icons/bs";
 export default function Jumbotron() {
   return (
@@ -35,22 +36,27 @@ export default function Jumbotron() {
           </span>
         </p>
         <div className="mb-1 lg:flex lg:gap-3">
-          <Button className="flex gap-3 rounded-xl px-3 py-1 shadow-md md:px-6 md:py-7 lg:mb-4">
-            <Avatar>
-              <AvatarImage
-                src={`/avataricon/myphoto.webp`}
-                alt="@satrio"
-                className="w-[28px] rounded-full border-2 md:w-[40px]"
-                width={100}
-                height={100}
-                sizes="(max-width:768px) 28px, 40px"
-              />
-              <AvatarFallback>SLB</AvatarFallback>
-            </Avatar>{" "}
-            <p className="text-sm font-light md:text-lg md:font-medium">
-              Claim your free strategy call with Satrio
-            </p>
-          </Button>
+          <Link
+            href={`https://cal.com/satrio-langlang-vlenyy/introductorycall`}
+            aria-label="Link to book a call"
+          >
+            <Button className="flex gap-3 rounded-xl px-3 py-1 shadow-md md:px-6 md:py-7 lg:mb-4">
+              <Avatar>
+                <AvatarImage
+                  src={`/avataricon/myphoto.webp`}
+                  alt="@satrio"
+                  className="w-[28px] rounded-full border-2 md:w-[40px]"
+                  width={100}
+                  height={100}
+                  sizes="(max-width:768px) 28px, 40px"
+                />
+                <AvatarFallback>SLB</AvatarFallback>
+              </Avatar>{" "}
+              <p className="text-sm font-light md:text-lg md:font-medium">
+                Claim your free strategy call with Satrio
+              </p>
+            </Button>
+          </Link>
         </div>
         <div className="flex gap-3 md:gap-8">
           <p className="text-xs md:text-lg">✅ Fast delivery</p>

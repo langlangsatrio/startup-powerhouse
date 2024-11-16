@@ -14,7 +14,8 @@ import { FaSearch } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { LocaleCode, ChainModifiers } from "contentful";
-import Image from "next/image";
+import Image, { ImageLoaderProps } from "next/image";
+import { ImageLoader } from "next/image";
 
 const NewsletterListPage = () => {
   const [newsletterData, setNewsletter] =
@@ -63,6 +64,12 @@ const NewsletterListPage = () => {
       | undefined,
   ) => {
     console.log(input);
+    const contentfulImageLoader: ImageLoader = ({
+      src,
+      width,
+    }: ImageLoaderProps) => {
+      return `${src}?w=${width}`;
+    };
     return input?.map((value, index: number) => (
       <Card
         key={index}
@@ -79,6 +86,7 @@ const NewsletterListPage = () => {
         </Link>
         <CardContent>
           <Image
+            loader={contentfulImageLoader}
             width={200}
             height={50}
             src={`https://${(value.fields.image as unknown as TypeStartupPowerhouseNewsletterImage).fields.file.url}`}

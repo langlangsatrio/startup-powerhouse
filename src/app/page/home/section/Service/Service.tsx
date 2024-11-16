@@ -36,12 +36,16 @@ export default function Service() {
           startup has never been this easy.
         </p>
         <div className="hidden gap-3 lg:flex">
-          <Button
-            className="hidden h-fit text-lg shadow-md shadow-gray-300 lg:flex"
-            variant={"secondary"}
+          <Link
+            href={`https://cal.com/satrio-langlang-vlenyy/introductorycall`}
           >
-            <IoIosCall /> Book a call
-          </Button>
+            <Button
+              className="hidden h-fit text-lg shadow-md shadow-gray-300 lg:flex"
+              variant={"secondary"}
+            >
+              <IoIosCall /> Book a call
+            </Button>
+          </Link>
           <Badge className="border border-red-700 bg-red-200 px-3 py-3 text-red-800">
             Q4 2024 now booking - limited
           </Badge>
@@ -63,12 +67,16 @@ export default function Service() {
                   market validation stage.
                 </p>
                 <div className="flex gap-2 pt-4">
-                  <Button
-                    className="h-fit w-fit bg-gray-900 text-xs lg:hidden"
-                    variant={"default"}
+                  <Link
+                    href={`https://cal.com/satrio-langlang-vlenyy/introductorycall`}
                   >
-                    Book a call
-                  </Button>
+                    <Button
+                      className="h-fit w-fit bg-gray-900 text-xs lg:hidden"
+                      variant={"default"}
+                    >
+                      Book a call
+                    </Button>
+                  </Link>
                   <Link href={"/page/services/mvp-development"}>
                     <Button
                       className="h-fit w-fit bg-gray-900 text-xs"
@@ -95,12 +103,16 @@ export default function Service() {
                   market validation stage.
                 </p>
                 <div className="flex gap-2 pt-4">
-                  <Button
-                    className="h-fit w-fit bg-gray-900 text-xs lg:hidden"
-                    variant={"default"}
+                  <Link
+                    href={`https://cal.com/satrio-langlang-vlenyy/introductorycall`}
                   >
-                    Book a call
-                  </Button>
+                    <Button
+                      className="h-fit w-fit bg-gray-900 text-xs lg:hidden"
+                      variant={"default"}
+                    >
+                      Book a call
+                    </Button>
+                  </Link>
                   <Link href={"/page/services/landing-page"}>
                     <Button
                       className="h-fit w-fit bg-gray-900 text-xs"
@@ -127,12 +139,16 @@ export default function Service() {
                   market validation stage.
                 </p>
                 <div className="flex gap-2 pt-4">
-                  <Button
-                    className="h-fit w-fit bg-gray-900 text-xs lg:hidden"
-                    variant={"default"}
+                  <Link
+                    href={`https://cal.com/satrio-langlang-vlenyy/introductorycall`}
                   >
-                    Book a call
-                  </Button>
+                    <Button
+                      className="h-fit w-fit bg-gray-900 text-xs lg:hidden"
+                      variant={"default"}
+                    >
+                      Book a call
+                    </Button>
+                  </Link>
                   <Link href={"/page/services/market-research"}>
                     <Button
                       className="h-fit w-fit bg-gray-900 text-xs"
@@ -240,8 +256,8 @@ export default function Service() {
                   href={"/page/services/market-research"}
                   className="flex items-center justify-center gap-2"
                 >
-                  <p>Explore Research Services</p>
                   <Button>
+                    <p className="">Explore Market Research Services</p>{" "}
                     <div>
                       <GoArrowUpRight />
                     </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 
@@ -15,10 +16,15 @@ export default function Contact() {
           Why not begin with a convo? Hit the button to book a call with Satrio
         </h1>
       </div>
-      <Button className="h-full rounded-2xl text-xl md:px-7 md:py-3 md:text-3xl lg:w-3/4 lg:py-7 lg:text-5xl">
-        <p>Book a call and get inquries here</p>
-        <BsFillLightningChargeFill className="h-full w-full lg:hidden" />
-      </Button>
+      <Link
+        href={`https://cal.com/satrio-langlang-vlenyy/introductorycall`}
+        className="flex h-full w-full items-center justify-center"
+      >
+        <Button className="h-full rounded-2xl text-xl md:px-7 md:py-3 md:text-3xl lg:w-3/4 lg:py-7 lg:text-5xl">
+          <p>Book a call and get inquries here</p>
+          <BsFillLightningChargeFill className="h-full w-full lg:hidden" />
+        </Button>
+      </Link>
     </div>
   );
 }
