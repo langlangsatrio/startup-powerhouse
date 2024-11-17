@@ -9,9 +9,10 @@ export default function TestimonialsRatingBadge() {
           <AvatarImage
             src={`/avataricon/muck.webp`}
             alt="User"
-            width={100}
-            height={100}
-            className="border-20 w-10 rounded-full border border-white shadow-lg md:w-10"
+            width={40}
+            height={40}
+            className="border-20 w-9 rounded-full border border-white shadow-lg md:w-10"
+            loading="lazy"
           />
           <AvatarFallback>Shipper</AvatarFallback>
         </Avatar>
@@ -19,9 +20,10 @@ export default function TestimonialsRatingBadge() {
           <AvatarImage
             src={`/avataricon/elon.webp`}
             alt="User"
-            width={100}
-            height={100}
-            className="border-20 w-10 rounded-full border border-white shadow-lg md:w-10"
+            width={40}
+            height={40}
+            className="border-20 w-9 rounded-full border border-white shadow-lg md:w-10"
+            loading="lazy"
           />
           <AvatarFallback>Shipper</AvatarFallback>
         </Avatar>
@@ -29,9 +31,10 @@ export default function TestimonialsRatingBadge() {
           <AvatarImage
             src={`/avataricon/myphoto.webp`}
             alt="User"
-            width={100}
-            height={100}
-            className="border-20 w-10 rounded-full border border-white shadow-lg md:w-10"
+            width={40}
+            height={40}
+            className="border-20 w-9 rounded-full border border-white shadow-lg md:w-10"
+            loading="lazy"
           />
           <AvatarFallback>Shipper</AvatarFallback>
         </Avatar>
@@ -39,9 +42,10 @@ export default function TestimonialsRatingBadge() {
           <AvatarImage
             src={`/avataricon/nikitabier.webp`}
             alt="User"
-            width={100}
-            height={100}
-            className="border-20 w-10 rounded-full border border-white shadow-lg md:w-10"
+            width={40}
+            height={40}
+            className="border-20 w-9 rounded-full border border-white shadow-lg md:w-10"
+            loading="lazy"
           />
           <AvatarFallback>Shipper</AvatarFallback>
         </Avatar>

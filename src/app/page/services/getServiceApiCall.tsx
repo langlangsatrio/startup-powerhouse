@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { ImageLoader, ImageLoaderProps } from "next/image";
 import RichText from "@/components/richText/richText";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import contentfulClient from "@/lib/contentful/contentfulClient";
@@ -36,6 +36,14 @@ const GetServiceDetails: React.FC<IGetProduct> = ({ id }) => {
   if (!fecthedService) {
     return <div>error</div>;
   }
+
+  const contentfulImageLoader: ImageLoader = ({
+    src,
+    width,
+  }: ImageLoaderProps) => {
+    return `${src}?w=${width}`;
+  };
+
   return (
     <div className="page-layout flex h-full flex-col items-start justify-center gap-0 bg-white px-10 pt-10 md:pt-16 lg:mt-0 lg:gap-4 lg:px-44 lg:pt-28">
       <div className="title-wrapper mb-5 flex w-full flex-col items-center lg:mb-6 lg:flex-row lg:items-center lg:justify-center">
@@ -61,6 +69,7 @@ const GetServiceDetails: React.FC<IGetProduct> = ({ id }) => {
           height={500}
           alt={`${fecthedService?.title as unknown as string}`}
           className="rounded-xl"
+          loader={contentfulImageLoader}
         />
       </div>
       <div className="description text-md hidden text-center leading-relaxed lg:mb-5 lg:block lg:py-10 lg:text-left lg:text-xl lg:leading-loose">

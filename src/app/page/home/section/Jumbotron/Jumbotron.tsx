@@ -39,8 +39,9 @@ export default function Jumbotron() {
           <Link
             href={`https://cal.com/satrio-langlang-vlenyy/introductorycall`}
             aria-label="Link to book a call"
+            className="px-2 py-2"
           >
-            <Button className="flex gap-3 rounded-xl px-3 py-1 shadow-md md:px-6 md:py-7 lg:mb-4">
+            <Button className="flex gap-3 rounded-xl px-4 py-2 shadow-md md:px-8 md:py-9 lg:mb-4">
               <Avatar>
                 <AvatarImage
                   src={`/avataricon/myphoto.webp`}

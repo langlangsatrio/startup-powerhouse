@@ -51,7 +51,11 @@ const BlogDetailPage: React.FC<IAcceptInput> = ({ params }: IAcceptInput) => {
 
   console.log(blogData?.fields.body);
   if (!blogData) {
-    return <div>error</div>;
+    return (
+      <div className="flex h-full w-full items-center justify-center text-2xl font-bold">
+        Loading...
+      </div>
+    );
   }
 
   const contentfulImageLoader: ImageLoader = ({
